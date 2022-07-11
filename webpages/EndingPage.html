@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myBUS.com/ticket displaying</title>
+  <link rel="icon" href="/images/icons8-bus.gif">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="module" src="/js/ending.js"></script>
+
+  <style>
+      .confirmSection{
+        float:left ;
+          height: auto;
+          width: auto;
+          margin-top: 2%;
+          margin-bottom: 2%;
+          border: 1px solid grey;
+          border-radius: 2em;
+          border-color: grey;
+      }
+      .paymentSection{
+          float: right;
+         height: auto;
+          width: auto;
+          margin-top: 2%;
+          margin-bottom: 2%; 
+          border: 1px solid grey;
+          border-radius: 2em;
+          border-color: grey;
+      }
+
+      .MainContainer
+      {
+          width: auto;
+          height: auto;
+          background-color: #fb0898;
+          border: 1px;
+          border-top-left-radius: 2em;
+          border-top-right-radius: 2em;
+          border-color: #fb0898;
+      }
+
+    html
+    {
+
+        height: auto;
+        width: auto;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        border: 1px solid #fb0898;
+        border-radius: 2em
+    }
+     body
+      {
+          border-radius:2px;
+      } 
+
+  </style>
+
+</head>
+
+<body align=center>
+
+    <!-- main outer div -->
+    <div class="MainContainer">
+       
+          <div class="outerFrame" style="margin-left: 5%;margin-right: 5%;">
+            <label style="align-content: center; margin-left: 200px; margin-top: 20px; color: white;" align=center>
+                <b>
+                    Registered with Mobile Number 
+                </b>
+            </label>
+            <label>
+                <b id="phone"></b>
+            </label>
+    
+            <!-- internal content  -->
+           <div class="internalMainDiv">
+                <!--Booking confirmed section code -->
+               <div class="confirmSection">
+                               
+                <div class="contentOfBooking">
+                 <!--Booking confirmed image and text -->
+                 <div>
+                    <img src="/images/ok.png" height="48px" style="margin-top: 10px ">
+                    <label style="color: green; font-weight: 1000;"><b>Booking confirmed</b></label>
+                 </div>
+    
+                 <label style="margin-top: 20px; color: grey;">
+                    <b>
+                        Reach pick-up point before 30 mins
+                    </b>
+                </label>
+                 
+                 <!-- details of trip -->
+                 <div style="margin-top: 10px; ">
+                     <b>No of passengers : </b>
+                     <label>
+                         <b id="noofpass">
+                             2
+                         </b>
+                     </label>
+                     
+                     <br>
+    
+                     <label style="text-transform: uppercase; ">
+                        from 
+                        <b style=" margin-left: 10px;" id="startpoint"> 
+                        <!-- starting point -->
+                        </b>
+                     </label> <br>
+    
+                     <label style="margin-left: 60px; color: grey;">
+                         <b>*<br>*<br>*<br>*<br>*<br>*</b>
+                     </label> <br>
+    
+                     <label style="text-transform: uppercase;">
+                        
+                         <b style="margin-left:1%;" id="endpoint">
+                             <!-- Destination point -->
+                         </b>
+                     </label><br>
+                      <label style="text-transform: uppercase;">
+                         <b  id="seatnumbers">
+                             <!-- Seat numbers -->
+                          </b>
+                     </label><br> 
+                 </div>
+                </div>
+    
+            </div>
+    
+            <!-- Payment section Code  -->
+            <div class="paymentSection">
+    
+                <!-- Summary heading text -->
+                <div style="align-self: left; margin-left:30px; margin-top: 10px;margin-bottom: 20px;">
+                    <img src="/images/money.png" height="48px" style="margin-top: 10px ">
+                    <label style="font-size: larger;">
+                        <b>
+                           Payment Summary
+                        </b>
+                    </label>
+                </div>
+    
+                <div class="paymentContent">
+                   
+                    <div id="totalPrice">
+                        Total
+                        <!-- Total Price -->
+                        <div id="price" style="float: right;">
+        
+                            <img src="/images/rupee.png" height="20px">
+                            
+                            <label style="float:right; font-size: large;">
+                                <b style="font-weight: 800;" id="amount">
+                                    <!-- actual price here -->
+                                </b>
+                            </label> 
+                        </div>
+                    </div>
+    
+                    <br>
+                   
+                    <div>
+                        Toll Charges
+                        <!-- toll Price -->
+                        <div id="price" style="float: right;">
+        
+                            <img src="/images/rupee.png" height="20px">
+                            
+                            <label style="float:right; font-size: large;">
+                                <b style="font-weight: 800;" id="tollprice" value="50.41">
+                                    <!-- Toll price here -->
+                                    50.41
+                                </b>
+                            </label> 
+                        </div>
+                    </div>
+    
+                    <br>
+    
+                    <div>
+                        Service Charges
+                        <!-- Service Price -->
+                        <div id="price" style="float: right;">
+        
+                            <img src="/images/rupee.png" height="20px">
+                            
+                            <label style="float:right; font-size: large;">
+                                <b style="font-weight: 800;" id="service" value="6.34">
+                                    <!-- Service price here -->
+                                    6.34
+                                </b>
+                            </label> 
+                        </div>
+                    </div>
+    
+                    <br>
+                    
+                    <!-- Amount to be paid -->
+    
+                    <div id="amount">
+    
+                        <label>
+                            <b style="font-size: larger;">
+                                Amount To Pay
+                            </b>
+                        </label>
+    
+                        <div id="price" style="float: right;">
+        
+                            <img src="/images/rupee.png" height="20px">
+                            
+                            <label style="float:right; font-size: large;">
+                                <b style="font-weight: 800;" id="totalprice">
+                                    <!-- Service price here -->
+                                </b>
+                            </label> 
+                        </div>
+    
+                    </div> 
+
+
+                    <button type="button" id="btnok" style="background-color: #fb0898; border-radius: 2em;
+                     margin-bottom: 20px; margin-top: 20px; float: right; margin-right: 15px; width: 100px; height:50px;">
+                        <b style="color: white; align-self: center;">
+                            OK
+                        </b>
+                    </button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

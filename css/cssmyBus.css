@@ -1,0 +1,67 @@
+.button {
+    background-color: #fd8098;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    height: 5vh;
+    padding: auto;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: wrap;
+    border-radius: 5px;
+    margin-left: 80px;
+}
+
+.cls {
+    display: flex;
+    justify-content: right;
+}
+
+.center {
+    margin-top: 10%
+}
+
+#btnlogin {
+    border-radius: .75em;
+}
+
+.content-center {
+    text-align: center;
+}
+
+.card-header {
+    justify-items: center;
+}
+
+#typed {
+    color: rgb(110, 108, 108);
+}
+
+.button-padding {
+    margin-top: 2vh;
+}
+
+.col-md-auto {
+    margin-top: 10px;
+}
+
+#img-pointer {
+    width: 30px;
+    height: 30px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.hidden {
+    display: none;
+}
+

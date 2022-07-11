@@ -1,0 +1,52 @@
+<html>
+
+<head>
+  <title>myBUS.com/DetailsPage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="/js/details.js"></script>
+  <link rel="icon" href="/images/icons8-bus.gif">
+  <style>
+      #details {
+        font-size: 20;
+        display: inline-block;
+        margin-top: 8em;
+        margin-left :auto;
+        border-radius: 2em;
+        width: auto;
+        height: auto;
+        padding: 10px;
+        border: 1px solid black;
+      }
+  </style>
+</head>
+
+<body align=center>
+  <div id="details">
+    <p id="confirm" style="color: #fb0898;text-decoration: underline;font-family:Verdana, Geneva, Tahoma, sans-serif;font-size: 25px;"><b>Confirm your Details</p>
+    <label id="Travelname" style="font-size: 25px;">Travels:</label><br><br>
+    <label id="source" style="padding-right:2%;">Source:</label>
+    <label id="destination" style="padding-right:2%;">Destination:</label><br><br>
+    <label id="category" style="font-size: 20px;">Category:</label><br><br>
+    <label id="departure" style="color:gray;padding-right: 10px;">Departure:</label>
+    <label id="deptime"></label><br><br>
+    <label id="arrival" style="color: gray;padding-right: 10px;">Arrival:</label>
+    <label id="arrtime"></label><br><br>
+    <label id="passengername">Enter Passenger Name:</label>
+    <input type="text" id="passengername" placeholder="Enter Main passenger name" /><br><br>
+    <label id="noofpassengers">Number of Passengers:</label>
+    <select name="Number of Passengers" id="numpassengers">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select><br>
+    <div align=center>
+      <button id="confirmbutton" type="button" style="border-radius:2em;background-color: #fb0898;margin-top: 1em;height:4%;font-size: medium;color: white;width: fit-content;">
+        Confirm
+      </button>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
